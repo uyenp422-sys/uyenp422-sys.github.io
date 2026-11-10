@@ -58,16 +58,39 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:820px){.nav{display:none}.open{margin-left:auto}}
 
 /* cover */
-.cover{border-bottom:1px solid var(--line)}
-.cover .wrap{min-height:min(86vh,820px);display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding-block:28px 32px}
-.cover-top,.cover-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--ink-2)}
-.cover h1{font-family:var(--display);font-weight:800;font-size:clamp(64px,17.5vw,250px);line-height:.82;letter-spacing:-.06em;margin:0}
-.cover h1 span{display:block}
-.cover h1 .o{color:var(--pink)}
-.cover-sub{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px}
-.cover-name{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,52px);letter-spacing:-.03em;line-height:1}
-.cover-role{font-size:18px;color:var(--ink-2);margin-top:8px}
-.cover-tags{display:flex;gap:8px;flex-wrap:wrap}
+.cover{position:relative;overflow:hidden;min-height:min(90vh,860px);display:grid;place-items:center;border-bottom:1px solid var(--line);isolation:isolate}
+.cover-glow{position:absolute;inset:-10%;z-index:-2;background:radial-gradient(closest-side at 50% 55%,color-mix(in srgb,var(--pink) 42%,transparent),color-mix(in srgb,var(--pink) 14%,transparent) 55%,transparent 100%)}
+.cover-line{position:absolute;inset:0;width:100%;height:100%;z-index:-1;fill:none;stroke:color-mix(in srgb,var(--ink) 30%,transparent);stroke-width:2;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.cover-center{position:relative;z-index:2;display:flex;flex-direction:column;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+.cover-name{font-family:var(--body);font-weight:400;font-size:clamp(15px,1.6vw,22px);letter-spacing:-.01em;margin:0 0 -.2em .4em}
+.cover-title{font-family:var(--display);font-weight:800;font-size:clamp(72px,15.5vw,230px);line-height:.9;letter-spacing:-.055em;margin:0;white-space:nowrap}
+.o-vid{display:inline-block;width:.53em;height:.53em;border-radius:50%;overflow:hidden;vertical-align:-.015em;margin:0 .02em;border:.055em solid var(--pink);background:var(--frame);box-shadow:0 .08em .25em -.05em color-mix(in srgb,var(--pink) 70%,transparent)}
+.o-vid video{width:100%;height:100%;object-fit:cover;transform:scale(1.25)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cover-role{align-self:flex-end;margin:.35em 0 0;font-family:var(--body);font-weight:300;font-size:clamp(17px,2.4vw,34px);letter-spacing:-.02em;color:var(--ink)}
+.cover-bot{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:0 26px;color:var(--ink-2);z-index:2}
+.cover-bot a{text-decoration:none}
+.floats{position:absolute;inset:0;z-index:1;pointer-events:none}
+.fphone{position:absolute;width:clamp(78px,9vw,132px);aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--frame);border:4px solid var(--frame);box-shadow:0 22px 40px -18px rgba(30,10,25,.55);animation:bob 7s ease-in-out infinite}
+.fphone video{width:100%;height:100%;object-fit:cover}
+.fp-a{left:6%;top:18%;--r:-9deg;transform:rotate(var(--r))}
+.fp-b{right:6%;bottom:16%;--r:8deg;transform:rotate(var(--r));animation-delay:-3s}
+.ftool{position:absolute;width:var(--s,62px);height:var(--s,62px);border-radius:28%;background:#fff;display:grid;place-items:center;overflow:hidden;box-shadow:0 14px 28px -14px rgba(30,10,25,.45);transform:rotate(var(--r,0deg));animation:bob 6s ease-in-out infinite}
+.ftool img{width:100%;height:auto;mix-blend-mode:multiply}
+.ft-capcut{left:30%;top:9%;--s:66px;--r:-10deg}
+.ft-canva{right:24%;top:13%;--s:58px;--r:9deg;filter:blur(1.6px);animation-delay:-2s}
+.ft-claude{left:21%;bottom:17%;--s:62px;--r:11deg;animation-delay:-4s}
+.ft-chatgpt{right:33%;bottom:9%;--s:50px;--r:-8deg;filter:blur(2.2px);animation-delay:-1s}
+.ft-gemini{right:15%;top:44%;--s:46px;--r:14deg;animation-delay:-5s}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-10px) rotate(var(--r,0deg))}}
+@media (prefers-reduced-motion:reduce){.fphone,.ftool{animation:none}}
+@media (max-width:760px){
+  .cover{min-height:min(88vh,720px)}
+  .fp-a{left:4%;top:12%}.fp-b{right:4%;bottom:14%}
+  .ft-capcut{left:58%;top:8%;--s:48px}.ft-canva{display:none}.ft-gemini{right:6%;top:40%;--s:38px}
+  .ft-claude{left:8%;bottom:22%;--s:46px}.ft-chatgpt{right:34%;bottom:10%;--s:40px}
+  .cover-bot{flex-direction:column;align-items:flex-start;gap:6px}
+}
 .chip{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.04em;border:1px solid var(--line);border-radius:99px;padding:3px 9px;color:var(--ink-2)}
 .chip.hot{background:var(--pink);border-color:var(--pink);color:var(--on-pink);font-weight:600}
 
@@ -238,18 +261,26 @@ h3{font-family:var(--display);font-weight:700;font-size:clamp(24px,2.6vw,32px);l
 <main id="top">
   <!-- 00 COVER -->
   <section class="cover" aria-label="Trang bìa">
-    <div class="wrap">
-      <div class="cover-top mono"><span>PORTFOLIO · 2026</span><span>SOCIAL MEDIA &amp; VIDEO EDITING</span></div>
-      <h1><span>Portf<span class="o" style="display:inline">o</span>lio</span></h1>
-      <div class="cover-sub">
-        <div>
-          <div class="cover-name">Phạm Phương Uyên</div>
-          <div class="cover-role">Video Editor &amp; Social Media · Đà Nẵng</div>
-        </div>
-        <div class="cover-tags"><span class="chip hot">SHORT-FORM</span><span class="chip hot">LONG-FORM</span><span class="chip">EVENT RECAP</span><span class="chip">LED VISUAL</span><span class="chip">VẬN HÀNH KÊNH</span></div>
-      </div>
-      <div class="cover-bot mono"><span>uyenp422@gmail.com · 0935 038 684</span><a href="#reel" style="text-decoration:none">CUỘN XUỐNG ↓</a></div>
+    <div class="cover-glow" aria-hidden="true"></div>
+    <svg class="cover-line" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true"><path d="M-30,560 C90,430 250,170 210,70 C175,-10 60,90 150,250 C250,420 430,640 610,575 C770,515 715,330 615,385 C520,440 650,640 840,610 C1010,585 1095,395 1020,305 C955,230 880,330 965,390 C1060,455 1160,300 1240,170"/></svg>
+
+    <div class="floats" aria-hidden="true">
+      <div class="fphone fp-a"><video src="reel_murata.mp4" poster="reel_murata.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
+      <div class="fphone fp-b"><video src="reel_bbq.mp4" poster="reel_bbq.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
+      <span class="ftool ft-capcut"><img src="tool_capcut.png" alt=""></span>
+      <span class="ftool ft-canva"><img src="tool_canva.png" alt=""></span>
+      <span class="ftool ft-claude"><img src="tool_claude.png" alt=""></span>
+      <span class="ftool ft-chatgpt"><img src="tool_chatgpt.png" alt=""></span>
+      <span class="ftool ft-gemini"><img src="tool_gemini.png" alt=""></span>
     </div>
+
+    <div class="cover-center">
+      <span class="cover-name">Phạm Phương Uyên</span>
+      <h1 class="cover-title">Portf<span class="o-vid" aria-hidden="true"><video src="reel_tm.mp4" poster="reel_tm.jpg" muted loop playsinline autoplay preload="metadata"></video></span><span class="sr-only">o</span>lio</h1>
+      <p class="cover-role">( social media · edit video · content )</p>
+    </div>
+
+    <div class="cover-bot wrap mono"><span>uyenp422@gmail.com · 0935 038 684</span><a href="#reel">CUỘN XUỐNG ↓</a></div>
   </section>
 
   <!-- 01 SHOWREEL -->
