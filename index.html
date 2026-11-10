@@ -66,6 +66,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .cover-title{font-family:var(--display);font-weight:800;font-size:clamp(72px,15.5vw,230px);line-height:.9;letter-spacing:-.055em;margin:0;white-space:nowrap}
 .o-vid{display:inline-block;width:.53em;height:.53em;border-radius:50%;overflow:hidden;vertical-align:-.015em;margin:0 .02em;border:.055em solid var(--pink);background:var(--frame);box-shadow:0 .08em .25em -.05em color-mix(in srgb,var(--pink) 70%,transparent)}
 .o-vid video{width:100%;height:100%;object-fit:cover;transform:scale(1.25)}
+.o-pink{color:var(--pink)}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .cover-role{align-self:flex-end;margin:.35em 0 0;font-family:var(--body);font-weight:300;font-size:clamp(17px,2.4vw,34px);letter-spacing:-.02em;color:var(--ink)}
 .cover-bot{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:0 26px;color:var(--ink-2);z-index:2}
@@ -246,9 +247,8 @@ h3{font-family:var(--display);font-weight:700;font-size:clamp(24px,2.6vw,32px);l
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="mark" href="#top">P.<b>P</b>.Uyên</a>
+    <a class="mark" href="#top">Phương <b>Uyên</b></a>
     <nav class="nav" aria-label="Mục lục">
-      <a href="#reel">Showreel</a>
       <a href="#about">Về tôi</a>
       <a href="#exp">Kinh nghiệm</a>
       <a href="#projects">Dự án</a>
@@ -265,8 +265,6 @@ h3{font-family:var(--display);font-weight:700;font-size:clamp(24px,2.6vw,32px);l
     <svg class="cover-line" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true"><path d="M-30,560 C90,430 250,170 210,70 C175,-10 60,90 150,250 C250,420 430,640 610,575 C770,515 715,330 615,385 C520,440 650,640 840,610 C1010,585 1095,395 1020,305 C955,230 880,330 965,390 C1060,455 1160,300 1240,170"/></svg>
 
     <div class="floats" aria-hidden="true">
-      <div class="fphone fp-a"><video src="reel_murata.mp4" poster="reel_murata.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
-      <div class="fphone fp-b"><video src="reel_bbq.mp4" poster="reel_bbq.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
       <span class="ftool ft-capcut"><img src="tool_capcut.png" alt=""></span>
       <span class="ftool ft-canva"><img src="tool_canva.png" alt=""></span>
       <span class="ftool ft-claude"><img src="tool_claude.png" alt=""></span>
@@ -276,41 +274,11 @@ h3{font-family:var(--display);font-weight:700;font-size:clamp(24px,2.6vw,32px);l
 
     <div class="cover-center">
       <span class="cover-name">Phạm Phương Uyên</span>
-      <h1 class="cover-title">Portf<span class="o-vid" aria-hidden="true"><video src="reel_tm.mp4" poster="reel_tm.jpg" muted loop playsinline autoplay preload="metadata"></video></span><span class="sr-only">o</span>lio</h1>
+      <h1 class="cover-title">Portf<span class="o-pink">o</span>lio</h1>
       <p class="cover-role">( social media · edit video · content )</p>
     </div>
 
-    <div class="cover-bot wrap mono"><span>uyenp422@gmail.com · 0935 038 684</span><a href="#reel">CUỘN XUỐNG ↓</a></div>
-  </section>
-
-  <!-- 01 SHOWREEL -->
-  <section class="sec" id="reel">
-    <div class="wrap">
-      <div class="sec-head"><h2>Show<em>reel.</em></h2><span class="mono">4 KÊNH · 4 PHONG CÁCH</span></div>
-      <p class="lead">Bốn video, bốn kênh, bốn cách dựng khác nhau: kênh động lực cần chữ chạy theo nhịp nói, kênh coaching cần hook và phụ đề rõ khi tắt tiếng, kênh sự kiện cần cắt nhanh theo không khí hậu trường, kênh lifestyle cần cảnh món ăn và chú thích dễ đọc.</p>
-      <div class="reel">
-        <a class="reel-item" href="https://www.tiktok.com/@togethermotivation/video/7442544120570072327" target="_blank" rel="noopener">
-          <div class="phone"><video src="reel_tm.mp4" poster="reel_tm.jpg" muted loop playsinline autoplay preload="metadata"></video><span class="badge">4.9M VIEW</span></div>
-          <div class="reel-meta"><b>Kinetic text</b><span class="mono">TOGETHER MOTIVATION</span></div>
-          <p>Talking head dịch sang tiếng Việt, thẻ chữ vàng nhảy theo nhịp, chuyển sang b-roll phong cảnh.</p>
-        </a>
-        <a class="reel-item" href="https://www.facebook.com/reel/1280950478444791" target="_blank" rel="noopener">
-          <div class="phone"><video src="reel_jen.mp4" poster="reel_jen.jpg" muted loop playsinline autoplay preload="metadata"></video><span class="badge">28K VIEW</span></div>
-          <div class="reel-meta"><b>Coaching reel</b><span class="mono">JENNIFER DAFFERN</span></div>
-          <p>Làm sao để tiệm nail kiếm $100K gift card mùa lễ: hook câu hỏi, phụ đề động, chữ số nổi bật.</p>
-        </a>
-        <a class="reel-item" href="https://www.tiktok.com/@han.hoan.agency/video/7636731119383235847" target="_blank" rel="noopener">
-          <div class="phone"><video src="reel_murata.mp4" poster="reel_murata.jpg" muted loop playsinline autoplay preload="metadata"></video><span class="badge">BTS · 3 SÂN KHẤU</span></div>
-          <div class="reel-meta"><b>Event BTS</b><span class="mono">DELIGHT AGENCY</span></div>
-          <p>Hậu trường đêm tổng kết Murata: cắt nhanh giữa phòng điều khiển, sân khấu LED và khán phòng.</p>
-        </a>
-        <a class="reel-item" href="https://www.tiktok.com/@chillwu43/video/7677891060340673810" target="_blank" rel="noopener">
-          <div class="phone"><video src="reel_bbq.mp4" poster="reel_bbq.jpg" muted loop playsinline autoplay preload="metadata"></video><span class="badge">5.7K VIEW</span></div>
-          <div class="reel-meta"><b>Food review</b><span class="mono">CHILLWU</span></div>
-          <p>Review quán nướng Hàn ở Đà Nẵng: cận cảnh món, chú thích chữ viết tay, kết bằng địa chỉ quán.</p>
-        </a>
-      </div>
-    </div>
+    <div class="cover-bot wrap mono"><span>uyenp422@gmail.com · 0935 038 684</span><a href="#about">CUỘN XUỐNG ↓</a></div>
   </section>
 
   <!-- 02 ABOUT -->
