@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Portfolio của Phạm Phương Uyên – Video Editor & Social Media tại Đà Nẵng. Short-form, long-form, event recap và vận hành kênh TikTok, Facebook.">
+<meta property="og:title" content="Phạm Phương Uyên – Video Editor & Social Media">
+<meta property="og:description" content="Showreel, dự án và số liệu các kênh TikTok, Facebook đã vận hành.">
+<meta property="og:image" content="https://uyenp422-sys.github.io/portrait.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style><title>Phạm Phương Uyên Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: cover → showreel (3 styles, 3 channels) → about → experience → projects (one block per channel, numbers first, then the work) → contact. Every video appears once. */
+:root{
+  --paper:#F3F0F3;
+  --paper-2:#E9E4EA;
+  --ink:#151216;
+  --ink-2:#5E5660;
+  --line:#D6CFD8;
+  --pink:#F2479B;
+  --pink-ink:#C7247A;
+  --lilac:#B99AF0;
+  --on-pink:#FFFFFF;
+  --frame:#1C181D;
+  --display:"Bricolage Grotesque","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+  --maxw:1240px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#131014;--paper-2:#1D191E;--ink:#F3EEF3;--ink-2:#ABA2AD;--line:#353037;
+  --pink:#FF6FB4;--pink-ink:#FF8EC5;--lilac:#C7B0F5;--on-pink:#1A0B13;--frame:#000000;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#131014;--paper-2:#1D191E;--ink:#F3EEF3;--ink-2:#ABA2AD;--line:#353037;
+  --pink:#FF6FB4;--pink-ink:#FF8EC5;--lilac:#C7B0F5;--on-pink:#1A0B13;--frame:#000000;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,video{display:block;max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.04em}
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:4px}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.mark{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none;letter-spacing:-.02em}
+.mark b{color:var(--pink)}
+.nav{display:flex;gap:18px;margin-left:auto}
+.nav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink-2)}
+.nav a:hover{color:var(--ink)}
+.open{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:7px 12px;border-radius:99px;background:var(--ink);color:var(--paper);text-decoration:none;white-space:nowrap}
+.open i{width:7px;height:7px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 3px color-mix(in srgb,var(--pink) 35%,transparent)}
+@media (max-width:820px){.nav{display:none}.open{margin-left:auto}}
+
+/* cover */
+.cover{border-bottom:1px solid var(--line)}
+.cover .wrap{min-height:min(86vh,820px);display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding-block:28px 32px}
+.cover-top,.cover-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--ink-2)}
+.cover h1{font-family:var(--display);font-weight:800;font-size:clamp(64px,17.5vw,250px);line-height:.82;letter-spacing:-.06em;margin:0}
+.cover h1 span{display:block}
+.cover h1 .o{color:var(--pink)}
+.cover-sub{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px}
+.cover-name{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,52px);letter-spacing:-.03em;line-height:1}
+.cover-role{font-size:18px;color:var(--ink-2);margin-top:8px}
+.cover-tags{display:flex;gap:8px;flex-wrap:wrap}
+.chip{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.04em;border:1px solid var(--line);border-radius:99px;padding:3px 9px;color:var(--ink-2)}
+.chip.hot{background:var(--pink);border-color:var(--pink);color:var(--on-pink);font-weight:600}
+
+/* sections */
+section{scroll-margin-top:70px}
+.sec{padding-block:96px 24px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:1px solid var(--ink);padding-bottom:12px;margin-bottom:36px}
+.sec-head .mono{color:var(--ink-2)}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(44px,7.5vw,104px);line-height:.9;letter-spacing:-.045em;margin:0;text-wrap:balance}
+h2 em,h3 em{font-style:normal;color:var(--pink)}
+h3{font-family:var(--display);font-weight:700;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.02em;line-height:1.1;margin:0}
+.lead{max-width:62ch;color:var(--ink-2);margin:0}
+
+/* showreel */
+.reel{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;max-width:760px}
+.lf{margin-top:4px;max-width:760px}
+@media (max-width:700px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}}
+.reel-item{display:flex;flex-direction:column;gap:12px;text-decoration:none}
+.phone{position:relative;aspect-ratio:9/16;border-radius:20px;overflow:hidden;background:var(--frame);border:5px solid var(--frame);box-shadow:0 26px 50px -24px rgba(20,10,20,.5)}
+.phone video{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;top:10px;left:10px;background:var(--pink);color:var(--on-pink);font-family:var(--mono);font-size:11px;font-weight:600;padding:3px 8px;border-radius:99px}
+.reel-meta{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.reel-meta b{font-family:var(--display);font-size:22px;letter-spacing:-.02em}
+.reel-meta .mono{color:var(--ink-2)}
+.reel-item p{margin:0;font-size:14px;color:var(--ink-2)}
+@media (max-width:960px){.reel{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.reel{grid-template-columns:1fr}.phone{max-width:340px;margin:0 auto;width:100%}}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.portrait{position:relative;max-width:360px}
+.portrait img{width:100%;border-radius:4px}
+.portrait .tag{position:absolute;right:-10px;bottom:18px;background:var(--pink);color:var(--on-pink);font-family:var(--display);font-weight:800;font-size:22px;padding:6px 14px;border-radius:99px;transform:rotate(-6deg)}
+.bigname{font-family:var(--display);font-weight:800;font-size:clamp(44px,6vw,80px);line-height:.92;letter-spacing:-.04em;margin:0 0 20px}
+.about p{max-width:60ch;color:var(--ink-2);margin:0 0 16px}
+.about p strong{color:var(--ink)}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:8px 24px;margin:24px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:15px}
+.facts dt{color:var(--ink-2)}
+.facts dd{margin:0;font-weight:500}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:40px}
+.skill{background:var(--paper-2);padding:20px}
+.skill .mono{color:var(--pink-ink);font-weight:600}
+.skill h3{margin:8px 0 8px;font-size:22px}
+.skill p{margin:0;font-size:14px;color:var(--ink-2)}
+@media (max-width:860px){.about{grid-template-columns:1fr;gap:28px}.skills{grid-template-columns:1fr}}
+.tools{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+.tools-h{color:var(--ink-2)}
+.tool-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px}
+.tool-list li{display:flex;align-items:center;gap:10px;background:var(--paper-2);border-radius:99px;padding:6px 16px 6px 6px;font-weight:600;font-size:15px}
+.tool-ic{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden;flex:none}
+.tool-ic img{width:44px;height:auto;mix-blend-mode:multiply}
+
+/* experience */
+.exp{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.exp-title{font-family:var(--display);font-weight:800;font-size:clamp(48px,7vw,96px);line-height:.88;letter-spacing:-.045em;margin:0;position:sticky;top:90px;align-self:start}
+.jobs{list-style:none;margin:0;padding:0}
+.job{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
+.job:first-child{border-top:0;padding-top:0}
+.job .when{color:var(--ink-2);padding-top:6px}
+.job h3{font-size:24px}
+.job .role{font-size:14px;font-weight:600;color:var(--pink-ink);margin:4px 0 8px}
+.job p{margin:0;color:var(--ink-2);font-size:15px;max-width:58ch}
+.job a{font-size:13px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--pink);display:inline-block;margin-top:8px}
+@media (max-width:860px){.exp{grid-template-columns:1fr;gap:20px}.exp-title{position:static}.job{grid-template-columns:1fr;gap:4px}}
+
+/* project */
+.proj{padding-block:56px 8px;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.proj-head{display:grid;grid-template-columns:auto 1fr auto;gap:8px 24px;align-items:baseline;margin-bottom:20px}
+.proj-no{font-family:var(--mono);font-size:13px;color:var(--pink-ink);font-weight:600}
+.proj-head h3{font-size:clamp(30px,4vw,52px);letter-spacing:-.035em}
+.proj-head .mono{color:var(--ink-2);text-align:right}
+.proj-body{display:grid;grid-template-columns:1fr 1.25fr;gap:32px;margin-bottom:24px}
+.proj-body p{margin:0 0 12px;color:var(--ink-2);max-width:56ch}
+.proj-body p strong{color:var(--ink)}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;align-content:start}
+.kpi{background:var(--paper-2);padding:16px 18px}
+.kpi b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(30px,3.4vw,44px);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.kpi b small{font-size:.55em;color:var(--pink)}
+.kpi span{display:block;font-size:13px;color:var(--ink-2);margin-top:6px}
+.kpi.hot{background:var(--pink);color:var(--on-pink)}
+.kpi.hot b small,.kpi.hot span{color:var(--on-pink);opacity:.9}
+@media (max-width:860px){.proj-head{grid-template-columns:auto 1fr}.proj-head .mono{grid-column:1/-1;text-align:left}.proj-body{grid-template-columns:1fr;gap:20px}}
+
+/* view chart */
+.views{margin:8px 0 24px;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.views-h{display:flex;justify-content:space-between;gap:12px;color:var(--ink-2);margin-bottom:8px}
+.vrow{display:grid;grid-template-columns:minmax(0,1fr) 2fr 72px;gap:12px;align-items:center;padding:6px 0;text-decoration:none;border-top:1px dashed var(--line)}
+.vrow:first-of-type{border-top:0}
+.vrow .t{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vrow .bar{height:10px;background:var(--paper-2);border-radius:99px;overflow:hidden}
+.vrow .bar i{display:block;height:100%;background:var(--pink);border-radius:99px;min-width:3px}
+.vrow .n{font-family:var(--mono);font-size:13px;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.vrow:hover .t{color:var(--pink-ink)}
+.views-note{margin:8px 0 0;font-size:12px;color:var(--ink-2)}
+@media (max-width:560px){.vrow{grid-template-columns:1fr 64px}.vrow .bar{grid-column:1/-1;grid-row:2}}
+
+/* media grids */
+.g916{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.g916.five{grid-template-columns:repeat(5,1fr)}
+.tile{position:relative;aspect-ratio:9/16;overflow:hidden;background:var(--frame);text-decoration:none;color:#fff}
+.tile img,.tile video{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.tile:hover img,.tile:hover video{transform:scale(1.04)}
+.cap{position:absolute;inset:auto 0 0 0;padding:28px 10px 9px;background:linear-gradient(transparent,rgba(0,0,0,.8));font-size:12px;line-height:1.35;font-weight:500;color:#fff}
+.cap .mono{display:block;font-size:10px;opacity:.8;margin-bottom:2px}
+.cap .v{display:inline-block;margin-top:4px;background:var(--pink);color:#fff;font-family:var(--mono);font-size:10px;font-weight:600;padding:1px 6px;border-radius:99px}
+@media (max-width:900px){.g916{grid-template-columns:repeat(3,1fr)}.g916.five{grid-template-columns:repeat(2,1fr)}.g916.five>*:first-child{grid-column:span 2;aspect-ratio:16/12}}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.g5 .sq{aspect-ratio:1/1}
+.dl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.dl-grid .led{grid-column:1/-1;aspect-ratio:21/9}
+.wide.led img{object-position:50% 50%}
+@media (max-width:900px){.g5{grid-template-columns:repeat(3,1fr)}.g5.sqs{grid-template-columns:repeat(2,1fr)}.g5.sqs>:first-child{grid-column:1/-1}.dl-grid{grid-template-columns:repeat(2,1fr)}.dl-grid .led{aspect-ratio:16/9}}
+@media (max-width:520px){.g5{grid-template-columns:repeat(2,1fr)}.g5>:first-child{grid-column:1/-1;aspect-ratio:auto}.g5>.tile:first-child{aspect-ratio:9/16;max-width:70%;justify-self:center;width:100%}}
+.gpair{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;max-width:720px}
+.sq{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--frame);text-decoration:none}
+.sq img{width:100%;height:100%;object-fit:cover}
+.split{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:24px;align-items:start}
+@media (max-width:700px){.split{grid-template-columns:1fr}}
+
+.g169{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;margin-top:4px}
+.wide{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--frame);color:#fff;text-decoration:none}
+.wide img,.wide video{width:100%;height:100%;object-fit:cover}
+.wide .cap{padding:40px 14px 12px;font-size:14px}
+.wide.slate{display:flex;flex-direction:column;justify-content:space-between;padding:18px;background:var(--ink);color:var(--paper)}
+.wide.slate .big{font-family:var(--display);font-weight:800;font-size:clamp(26px,3.4vw,44px);line-height:.95;letter-spacing:-.03em}
+.wide.slate .big em{font-style:normal;color:var(--pink)}
+.slate-row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.wide.full{grid-column:1/-1;aspect-ratio:21/9}
+@media (max-width:700px){.g169{grid-template-columns:1fr}.wide.full{aspect-ratio:16/9}}
+.sub{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin:28px 0 12px}
+.sub h4{margin:0;font-family:var(--display);font-size:20px;letter-spacing:-.01em}
+.more{font-size:14px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--pink);padding-bottom:2px;white-space:nowrap}
+
+/* contact */
+.end{padding-block:110px 60px}
+.end h2{font-size:clamp(52px,10vw,150px)}
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:40px}
+.cbox{background:var(--paper-2);padding:20px;min-width:0}
+.cbox .mono{color:var(--ink-2)}
+.cbox .val{font-family:var(--display);font-weight:700;font-size:clamp(20px,2.2vw,28px);letter-spacing:-.02em;margin:6px 0 10px;overflow-wrap:anywhere;user-select:all}
+.copy{font:600 13px var(--body);background:none;border:1px solid var(--ink);color:var(--ink);border-radius:99px;padding:6px 14px;cursor:pointer}
+.copy:hover{background:var(--ink);color:var(--paper)}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+.foot{border-top:1px solid var(--line);padding-block:20px;color:var(--ink-2)}
+.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">P.<b>P</b>.Uyên</a>
+    <nav class="nav" aria-label="Mục lục">
+      <a href="#reel">Showreel</a>
+      <a href="#about">Về tôi</a>
+      <a href="#exp">Kinh nghiệm</a>
+      <a href="#projects">Dự án</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+    <a class="open" href="#contact"><i></i>Sẵn sàng nhận việc</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- 00 COVER -->
+  <section class="cover" aria-label="Trang bìa">
+    <div class="wrap">
+      <div class="cover-top mono"><span>PORTFOLIO · 2026</span><span>SOCIAL MEDIA &amp; VIDEO EDITING</span></div>
+      <h1><span>Portf<span class="o" style="display:inline">o</span>lio</span></h1>
+      <div class="cover-sub">
+        <div>
+          <div class="cover-name">Phạm Phương Uyên</div>
+          <div class="cover-role">Video Editor &amp; Social Media · Đà Nẵng</div>
+        </div>
+        <div class="cover-tags"><span class="chip hot">SHORT-FORM</span><span class="chip hot">LONG-FORM</span><span class="chip">EVENT RECAP</span><span class="chip">LED VISUAL</span><span class="chip">VẬN HÀNH KÊNH</span></div>
+      </div>
+      <div class="cover-bot mono"><span>uyenp422@gmail.com · 0935 038 684</span><a href="#reel" style="text-decoration:none">CUỘN XUỐNG ↓</a></div>
+    </div>
+  </section>
+
+  <!-- 01 SHOWREEL -->
+  <section class="sec" id="reel">
+    <div class="wrap">
+      <div class="sec-head"><h2>Show<em>reel.</em></h2><span class="mono">4 KÊNH · 4 PHONG CÁCH</span></div>
+      <p class="lead">Bốn video, bốn kênh, bốn cách dựng khác nhau: kênh động lực cần chữ chạy theo nhịp nói, kênh coaching cần hook và phụ đề rõ khi tắt tiếng, kênh sự kiện cần cắt nhanh theo không khí hậu trường, kênh lifestyle cần cảnh món ăn và chú thích dễ đọc.</p>
+      <div class="reel">
+        <a class="reel-item" href="https://www.tiktok.com/@togethermotivation/video/7442544120570072327" target="_blank" rel="noopener">
+          <div class="phone"><video src="reel_tm.mp4" poster="reel_tm.jpg" muted loop playsinline autoplay preload="metadata"></video><span class="badge">4.9M VIEW</span></div>
+          <div class="reel-meta"><b>Kinetic text</b><span class="mono">TOGETHER MOTIVATION</span></div>
+          <p>Talking head dịch sang tiếng Việt, thẻ chữ vàng nhảy theo nhịp, chuyển sang b-roll phong cảnh.</p>
+        </a>
+        <a class="reel-item" href="https://www.facebook.com/reel/1280950478444791" target="_blank" rel="noopener">
+          <div class="phone"><video src="reel_jen.mp4" poster="reel_jen.jpg" muted loop playsinline autoplay preload="metadata"></video><span class="badge">28K VIEW</span></div>
+          <div class="reel-meta"><b>Coaching reel</b><span class="mono">JENNIFER DAFFERN</span></div>
+          <p>Làm sao để tiệm nail kiếm $100K gift card mùa lễ: hook câu hỏi, phụ đề động, chữ số nổi bật.</p>
+        </a>
+        <a class="reel-item" href="https://www.tiktok.com/@han.hoan.agency/video/7636731119383235847" target="_blank" rel="noopener">
+          <div class="phone"><video src="reel_murata.mp4" poster="reel_murata.jpg" muted loop playsinline autoplay preload="metadata"></video><span class="badge">BTS · 3 SÂN KHẤU</span></div>
+          <div class="reel-meta"><b>Event BTS</b><span class="mono">DELIGHT AGENCY</span></div>
+          <p>Hậu trường đêm tổng kết Murata: cắt nhanh giữa phòng điều khiển, sân khấu LED và khán phòng.</p>
+        </a>
+        <a class="reel-item" href="https://www.tiktok.com/@chillwu43/video/7677891060340673810" target="_blank" rel="noopener">
+          <div class="phone"><video src="reel_bbq.mp4" poster="reel_bbq.jpg" muted loop playsinline autoplay preload="metadata"></video><span class="badge">5.7K VIEW</span></div>
+          <div class="reel-meta"><b>Food review</b><span class="mono">CHILLWU</span></div>
+          <p>Review quán nướng Hàn ở Đà Nẵng: cận cảnh món, chú thích chữ viết tay, kết bằng địa chỉ quán.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 ABOUT -->
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="sec-head"><h2>Về <em>tôi.</em></h2><span class="mono">ABOUT</span></div>
+      <div class="about">
+        <div class="portrait"><img src="portrait.png" alt="Ảnh chân dung Phạm Phương Uyên"><span class="tag">Hi!</span></div>
+        <div>
+          <p class="bigname">Phạm<br>Phương Uyên</p>
+          <p>Tôi đã tốt nghiệp ngành <strong>Quản trị Marketing</strong> và có kinh nghiệm thực tế về <strong>Content Marketing</strong>, <strong>Social Media</strong> và <strong>edit video</strong>. Tôi đã tham gia xây dựng nội dung, lập kế hoạch truyền thông, nghiên cứu insight khách hàng và trực tiếp vận hành nhiều kênh TikTok, Facebook.</p>
+          <p>Điều tôi làm tốt nhất là nối tư duy chiến lược với khâu dựng: biết video cần đạt mục tiêu gì trước khi mở timeline, rồi chọn phong cách edit phù hợp với từng kênh và từng thông điệp.</p>
+          <dl class="facts">
+            <dt>Học vấn</dt><dd>Cử nhân Quản trị Marketing, Đại học Greenwich cơ sở Đà Nẵng (đã tốt nghiệp)</dd>
+            <dt>Ngoại ngữ</dt><dd>Tiếng Anh B2 VSTEP, Đại học Ngoại ngữ (2023)</dd>
+            <dt>Nơi ở</dt><dd>Đà Nẵng · nhận việc remote</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="skills">
+        <div class="skill"><span class="mono">SKILL / 01</span><h3>Edit video</h3><p>Edit đa dạng thể loại: reels hook 3 giây, phụ đề động, motion text, talking head, recap sự kiện, long-form và visual LED.</p></div>
+        <div class="skill"><span class="mono">SKILL / 02</span><h3>Social media</h3><p>Lập kế hoạch nội dung, định hướng kênh, nắm bắt xu hướng và theo dõi chỉ số trên Facebook và TikTok để tối ưu liên tục.</p></div>
+        <div class="skill"><span class="mono">SKILL / 03</span><h3>Content</h3><p>Xây tuyến nội dung, nghiên cứu insight và xu hướng thị trường, viết kịch bản và chuyển thành ý tưởng dễ kết nối với người xem.</p></div>
+      </div>
+      <div class="tools">
+        <span class="mono tools-h">CÔNG CỤ SỬ DỤNG</span>
+        <ul class="tool-list">
+          <li><span class="tool-ic"><img src="tool_capcut.png" alt="" loading="lazy"></span>CapCut</li>
+          <li><span class="tool-ic"><img src="tool_canva.png" alt="" loading="lazy"></span>Canva</li>
+          <li><span class="tool-ic"><img src="tool_claude.png" alt="" loading="lazy"></span>Claude</li>
+          <li><span class="tool-ic"><img src="tool_chatgpt.png" alt="" loading="lazy"></span>ChatGPT</li>
+          <li><span class="tool-ic"><img src="tool_gemini.png" alt="" loading="lazy"></span>Gemini</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 EXPERIENCE -->
+  <section class="sec" id="exp">
+    <div class="wrap">
+      <div class="exp">
+        <p class="exp-title">Kinh<br>nghiệm<br><em style="font-style:normal;color:var(--pink)">làm việc.</em></p>
+        <ol class="jobs">
+          <li class="job"><span class="when mono">T9/2026 – NAY</span><div><h3>Jennifer Daffern – Giữ Tiệm Nail</h3><div class="role">Video editor &amp; Social media</div><p>Xây kênh từ đầu cho fanpage coaching chủ tiệm nail người Việt tại Mỹ. Edit short-form, long-form, recap lớp học và talking head.</p><a href="#p-jennifer">Xem dự án ↓</a></div></li>
+          <li class="job"><span class="when mono">5/6 – 18/6/2026</span><div><h3>Delight Agency</h3><div class="role">Content Intern</div><p>Lên kế hoạch, sáng tạo và biên tập video cho Facebook, TikTok; nghiên cứu xu hướng, insight khách hàng, phân tích đối thủ, đề xuất ý tưởng truyền thông.</p><a href="#p-delight">Xem dự án ↓</a></div></li>
+          <li class="job"><span class="when mono">2025 – 2026</span><div><h3>YESi Finance</h3><div class="role">Social media · Video ngắn</div><p>Quản lý và phát triển nội dung trên fanpage, group và TikTok; cập nhật tin tức, biên tập video ngắn, theo dõi chỉ số để tăng tiếp cận và tương tác.</p><a href="#p-yesi">Xem dự án ↓</a></div></li>
+          <li class="job"><span class="when mono">2024 – 2026</span><div><h3>Kenhbit</h3><div class="role">Content creator · Remote</div><p>Sáng tạo và triển khai nội dung về thị trường crypto trên website, fanpage và group cộng đồng.</p><a href="#p-kenhbit">Xem dự án ↓</a></div></li>
+          <li class="job"><span class="when mono">2024 – 2025</span><div><h3>Together Motivation</h3><div class="role">Video editor · Remote</div><p>Edit và đăng 2 video mỗi ngày, sáng tạo nội dung, cập nhật trend và tương tác với người theo dõi.</p><a href="#p-together">Xem dự án ↓</a></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 PROJECTS -->
+  <section class="sec" id="projects">
+    <div class="wrap">
+      <div class="sec-head"><h2>Dự án <em>&amp; số liệu.</em></h2><span class="mono">6 DỰ ÁN</span></div>
+
+      <!-- P01 Together Motivation -->
+      <article class="proj" id="p-together">
+        <div class="proj-head"><span class="proj-no">P01</span><h3>Together Motivation</h3><span class="mono">TIKTOK · T10/2024 – T2/2025</span></div>
+        <div class="proj-body">
+          <div>
+            <p>Kênh TikTok chia sẻ thông điệp truyền động lực từ người nổi tiếng, biên dịch từ tiếng Anh sang tiếng Việt. Tôi <strong>edit và đăng trung bình 2 video mỗi ngày</strong>, sáng tạo nội dung, cập nhật xu hướng, tối ưu format cho TikTok và trực tiếp tương tác với follower.</p>
+            <p>Phong cách dựng: kinetic text, phụ đề nhiều màu theo nhịp nói, ghép meme và cảnh phim, thẻ chữ vàng làm điểm nhấn.</p>
+          </div>
+          <div class="kpis">
+            <div class="kpi hot"><b>4.9<small>M</small></b><span>view cho video cao nhất</span></div>
+            <div class="kpi"><b>≈5<small>M</small></b><span>tổng view của 55 video trong giai đoạn</span></div>
+            <div class="kpi"><b>2<small>K</small>→10<small>K</small></b><span>follower sau một tháng quản lý</span></div>
+            <div class="kpi"><b>2<small>/ngày</small></b><span>nhịp đăng video</span></div>
+          </div>
+        </div>
+        <div class="g5 sqs">
+          <a class="sq" href="https://www.tiktok.com/@togethermotivation/video/7442544120570072327" target="_blank" rel="noopener"><img loading="lazy" src="g_tm49m.gif" alt="GIF video 4.9M view, kinetic text"><span class="cap"><span class="mono">KINETIC TEXT + B-ROLL</span>Làm điều khiến bạn hạnh phúc<br><span class="v">4.9M VIEW</span></span></a>
+          <a class="sq" href="https://www.tiktok.com/@togethermotivation/video/7443444335875575058" target="_blank" rel="noopener"><img loading="lazy" src="g_tm154k.gif" alt="GIF video Who care, ghép meme và phụ đề màu"><span class="cap"><span class="mono">MEME + PHỤ ĐỀ MÀU</span>Who care?<br><span class="v">15.4K VIEW</span></span></a>
+          <a class="sq" href="https://www.tiktok.com/@togethermotivation/video/7444391406551960840" target="_blank" rel="noopener"><img loading="lazy" src="g_tm101k.gif" alt="GIF video Positive way, kể chuyện với phụ đề"><span class="cap"><span class="mono">STORYTELLING</span>Positive way<br><span class="v">10.1K VIEW</span></span></a>
+          <a class="sq" href="https://www.tiktok.com/@togethermotivation/video/7432297342415539476" target="_blank" rel="noopener"><img loading="lazy" src="g_tm64k.gif" alt="GIF video What is the greatest version of you"><span class="cap"><span class="mono">PHỤ ĐỀ SONG NGỮ</span>Greatest version of you<br><span class="v">6.4K VIEW</span></span></a>
+          <a class="sq" href="https://www.tiktok.com/@togethermotivation/video/7445698918240816392" target="_blank" rel="noopener"><img loading="lazy" src="g_tm60k.gif" alt="GIF video Face it, fix it"><span class="cap"><span class="mono">KINETIC TEXT + B-ROLL</span>Face it, fix it<br><span class="v">6.0K VIEW</span></span></a>        </div>
+      </article>
+
+      <!-- P02 Jennifer -->
+      <article class="proj" id="p-jennifer">
+        <div class="proj-head"><span class="proj-no">P02</span><h3>Jennifer Daffern – Giữ Tiệm Nail</h3><span class="mono">FACEBOOK · T9/2026 – NAY</span></div>
+        <div class="proj-body">
+          <div>
+            <p>Fanpage coaching cho chủ tiệm nail người Việt tại Mỹ. Tôi phụ trách <strong>toàn bộ quy trình xây kênh</strong>: nghiên cứu đối thủ, lên ý tưởng, viết kịch bản, edit, đăng tải và tương tác cộng đồng.</p>
+            <p>Edit đa dạng thể loại: reels hook 3 giây, phụ đề động, motion text, talking head, recap lớp học, quảng cáo Facebook và long-form.</p>
+          </div>
+          <div class="kpis">
+            <div class="kpi hot"><b>×13</b><span>follower trong 1,5 tháng</span></div>
+            <div class="kpi"><b>350→4.7<small>K</small></b><span>người theo dõi fanpage</span></div>
+            <div class="kpi"><b>170<small>K</small></b><span>view cho reel cao nhất</span></div>
+            <div class="kpi"><b>290<small>K+</small></b><span>tổng view của 6 reel top</span></div>
+          </div>
+        </div>
+        <div class="sub"><h4>5 reel nổi bật · 9:16</h4><a class="more" href="https://www.facebook.com/jenifernailbusinesscoach/reels/" target="_blank" rel="noopener">Xem reels trên Facebook ↗</a></div>
+        <div class="g5">
+          <a class="tile" href="https://www.facebook.com/reel/1625243022474021" target="_blank" rel="noopener"><img loading="lazy" src="g_jfb170k.gif" alt="GIF reel Thợ ngồi chờ khách"><span class="cap"><span class="mono">HOOK TEXT + STICKER</span>Thợ ngồi chờ khách<br><span class="v">170K VIEW</span></span></a>
+          <a class="tile" href="https://www.facebook.com/reel/1082089831275851" target="_blank" rel="noopener"><img loading="lazy" src="g_jfb64k.gif" alt="GIF reel tiệm chết có cứu được không"><span class="cap"><span class="mono">MOTION GRAPHIC</span>Tiệm "chết" có cứu được?<br><span class="v">64K VIEW</span></span></a>
+          <a class="tile" href="https://www.facebook.com/reel/1280950478444791" target="_blank" rel="noopener"><img loading="lazy" src="g_jfb28k.gif" alt="GIF reel $100K gift card"><span class="cap"><span class="mono">PHỤ ĐỀ ĐỘNG</span>$100K gift card mùa lễ<br><span class="v">28K VIEW</span></span></a>
+          <a class="tile" href="https://www.facebook.com/reel/1159006099895651" target="_blank" rel="noopener"><img loading="lazy" src="g_jfb10k.gif" alt="GIF reel chia 60/40"><span class="cap"><span class="mono">EXPLAINER + ICON</span>Chia 60/40 với thợ<br><span class="v">10K VIEW</span></span></a>
+          <a class="tile" href="https://www.facebook.com/reel/1169605128741188" target="_blank" rel="noopener"><img loading="lazy" src="g_jfb98k.gif" alt="GIF reel gift card tiệm đối thủ"><span class="cap"><span class="mono">VLOG NGOÀI TRỜI</span>Gift card ở tiệm đối thủ<br><span class="v">9.8K VIEW</span></span></a>
+        </div>
+        <div class="sub"><h4>Long-form · Landing page video · 16:9</h4><a class="more" href="https://drive.google.com/file/d/1YWKhiqjWD9wUuUCiFw9Qse97EpZto0u6/view" target="_blank" rel="noopener">Xem bản đầy đủ 2:26 ↗</a></div>
+        <a class="wide lf" href="https://drive.google.com/file/d/1YWKhiqjWD9wUuUCiFw9Qse97EpZto0u6/view" target="_blank" rel="noopener" style="display:block"><img loading="lazy" src="g_landing.gif" alt="GIF video landing page: talking head, b-roll, motion graphic"><span class="cap"><span class="mono">TALKING HEAD · B-ROLL · MOTION GRAPHIC</span>Video landing page lớp học Holiday Gift Card</span></a>
+      </article>
+
+      <!-- P03 Delight -->
+      <article class="proj" id="p-delight">
+        <div class="proj-head"><span class="proj-no">P03</span><h3>Delight Agency</h3><span class="mono">TIKTOK · 5/6 – 18/6/2026</span></div>
+        <div class="proj-body">
+          <div>
+            <p>Agency truyền thông và tổ chức sự kiện trọn gói. Ở vị trí <strong>Content Intern</strong>, tôi lên kế hoạch, sáng tạo và edit video cho kênh TikTok: hậu trường sự kiện, recap buổi rehearsal, bộ sưu tập visual LED và video bắt trend dân sự kiện.</p>
+          </div>
+          <div class="kpis">
+            <div class="kpi hot"><b>820</b><span>view cho video cao nhất (BTS Murata)</span></div>
+            <div class="kpi"><b>4</b><span>video edit cho kênh</span></div>
+            <div class="kpi"><b>2.6<small>K</small></b><span>tổng view của 4 video</span></div>
+            <div class="kpi"><b>4</b><span>dạng nội dung: BTS, recap, LED, trend</span></div>
+          </div>
+        </div>
+        <div class="sub"><h4>Video đã edit cho kênh</h4><a class="more" href="https://www.tiktok.com/@han.hoan.agency" target="_blank" rel="noopener">TikTok Delight Agency ↗</a></div>
+        <div class="g4">
+          <a class="tile" href="https://www.tiktok.com/@han.hoan.agency/video/7636731119383235847" target="_blank" rel="noopener"><img loading="lazy" src="g_dmurata.gif" alt="GIF hậu trường đêm tổng kết Murata"><span class="cap"><span class="mono">BEHIND THE SCENES</span>3 sân khấu đêm tổng kết Murata<br><span class="v">820 VIEW</span></span></a>
+          <a class="tile" href="https://www.tiktok.com/@han.hoan.agency/video/7637566100141608200" target="_blank" rel="noopener"><img loading="lazy" src="g_dvisual.gif" alt="GIF bộ sưu tập visual LED"><span class="cap"><span class="mono">VISUAL LED</span>Bộ sưu tập Visual LED<br><span class="v">631 VIEW</span></span></a>
+          <a class="tile" href="https://www.tiktok.com/@han.hoan.agency/video/7641645847364553992" target="_blank" rel="noopener"><img loading="lazy" src="g_drehearsal.gif" alt="GIF recap event rehearsal"><span class="cap"><span class="mono">RECAP REHEARSAL</span>Chạy đua với deadline trước giờ G<br><span class="v">624 VIEW</span></span></a>
+          <a class="tile" href="https://www.tiktok.com/@han.hoan.agency/video/7643491978046360840" target="_blank" rel="noopener"><img loading="lazy" src="g_dcamxuc.gif" alt="GIF cảm xúc dân sự kiện"><span class="cap"><span class="mono">TREND · DÂN SỰ KIỆN</span>Cảm xúc chỉ dân sự kiện mới hiểu<br><span class="v">568 VIEW</span></span></a>
+        </div>
+      </article>
+
+      <!-- P04 YESi -->
+      <article class="proj" id="p-yesi">
+        <div class="proj-head"><span class="proj-no">P04</span><h3>YESi Finance</h3><span class="mono">TIKTOK · FANPAGE · GROUP · 2025 – 2026</span></div>
+        <div class="proj-body">
+          <div>
+            <p>Kênh thông tin tài chính, chính trị và đời sống. Tôi <strong>quản lý và phát triển nội dung</strong> trên fanpage, group và TikTok: cập nhật tin tức, biên tập video ngắn, theo dõi chỉ số và tối ưu nội dung để tăng tiếp cận và tương tác.</p>
+            <p>Phong cách dựng: tin nhanh dạng card chữ trên ảnh thời sự, nhịp nhanh, tiêu đề lớn đọc được khi tắt tiếng.</p>
+          </div>
+          <div class="kpis">
+            <div class="kpi hot"><b>1.3<small>M</small></b><span>view cho video cao nhất</span></div>
+            <div class="kpi"><b>2.1<small>M+</small></b><span>tổng view của 3 video top</span></div>
+            <div class="kpi"><b>71.7<small>K</small></b><span>lượt thích toàn kênh</span></div>
+            <div class="kpi"><b>2.6<small>K</small></b><span>người theo dõi TikTok</span></div>
+          </div>
+        </div>
+        <div class="g5">
+          <a class="tile" href="https://www.tiktok.com/@yesifinance/video/7628155526743952647" target="_blank" rel="noopener"><img loading="lazy" src="g_yesi13m.gif" alt="GIF 5 đối tượng bị khoá SIM"><span class="cap"><span class="mono">TIN NHANH · CARD CHỮ</span>5 đối tượng bị khoá SIM<br><span class="v">1.3M VIEW</span></span></a>
+          <a class="tile" href="https://www.tiktok.com/@yesifinance/video/7624833387840228609" target="_blank" rel="noopener"><img loading="lazy" src="g_yesi542k.gif" alt="GIF xác thực SIM trên VNeID"><span class="cap"><span class="mono">TIN NHANH · CARD CHỮ</span>Xác thực SIM trên VNeID<br><span class="v">542.1K VIEW</span></span></a>
+          <a class="tile" href="https://www.tiktok.com/@yesifinance/video/7605294175717788948" target="_blank" rel="noopener"><img loading="lazy" src="g_yesi206k.gif" alt="GIF tập đoàn Ấn Độ rót 750 tỷ"><span class="cap"><span class="mono">TIN DOANH NGHIỆP</span>Rót 750 tỷ vào Hannah Olala<br><span class="v">206.2K VIEW</span></span></a>
+          <a class="tile" href="https://www.tiktok.com/@yesifinance/video/7634237453737397524" target="_blank" rel="noopener"><img loading="lazy" src="g_yesi136k.gif" alt="GIF xe Lạc Hồng đón tổng thống Hàn Quốc"><span class="cap"><span class="mono">TIN THỜI SỰ</span>Xe Lạc Hồng đón tổng thống Hàn<br><span class="v">13.6K VIEW</span></span></a>
+          <a class="tile" href="https://www.tiktok.com/@yesifinance/video/7634050590230039815" target="_blank" rel="noopener"><img loading="lazy" src="g_yesi99k.gif" alt="GIF Green SM lên tiếng"><span class="cap"><span class="mono">TIN THỜI SỰ</span>Green SM lên tiếng<br><span class="v">9.9K VIEW</span></span></a>
+        </div>
+      </article>
+
+      <!-- P05 Kenhbit -->
+      <article class="proj" id="p-kenhbit">
+        <div class="proj-head"><span class="proj-no">P05</span><h3>Kenhbit</h3><span class="mono">FACEBOOK · WEBSITE · GROUP · T10/2024 – T6/2026</span></div>
+        <div class="proj-body">
+          <div>
+            <p>Kênh truyền thông cập nhật tin tức và kiến thức thị trường crypto. Hằng ngày tôi <strong>cập nhật tin, sáng tạo và biên tập nội dung, viết bài SEO, edit video</strong> và quản lý fanpage, group cộng đồng.</p>
+            <p>Trong thời gian tôi quản lý, fanpage thường xuyên đạt hơn 10 triệu lượt xem mỗi tháng trong nhiều tháng liên tiếp.</p>
+            <p><a class="more" href="https://www.facebook.com/kenhbit" target="_blank" rel="noopener">Xem fanpage Kenhbit ↗</a></p>
+          </div>
+          <div class="kpis">
+            <div class="kpi hot"><b>10<small>M+</small></b><span>view mỗi tháng trên fanpage</span></div>
+            <div class="kpi"><b>266<small>K</small></b><span>người theo dõi fanpage</span></div>
+            <div class="kpi"><b>20</b><span>tháng vận hành liên tục</span></div>
+            <div class="kpi"><b>3</b><span>kênh: fanpage, group, website</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- P06 ChillwU -->
+      <article class="proj" id="p-chillwu">
+        <div class="proj-head"><span class="proj-no">P06</span><h3>ChillwU</h3><span class="mono">TIKTOK · LIFESTYLE ĐÀ NẴNG</span></div>
+        <div class="proj-body">
+          <div>
+            <p>Kênh lifestyle Đà Nẵng để thử nghiệm format mới: <strong>slideshow ảnh có chữ, review quán ăn và vlog cà phê</strong>. Bài slideshow về đợt sale đạt hơn 218 nghìn lượt xem.</p>
+          </div>
+          <div class="kpis">
+            <div class="kpi hot"><b>218.7<small>K</small></b><span>view cho bài slideshow</span></div>
+            <div class="kpi"><b>3.2<small>K</small></b><span>lượt thích toàn kênh</span></div>
+          </div>
+        </div>
+        <div class="g3">
+          <a class="tile" href="https://www.tiktok.com/@chillwu43/photo/7676055933155364104" target="_blank" rel="noopener"><img loading="lazy" src="g_slides.gif" alt="GIF slideshow ảnh ChillwU"><span class="cap"><span class="mono">PHOTO SLIDESHOW</span>Đợt sale tới hết tháng 8<br><span class="v">218.7K VIEW</span></span></a>
+          <a class="tile" href="https://www.tiktok.com/@chillwu43/video/7677891060340673810" target="_blank" rel="noopener"><img loading="lazy" src="g_bbq.gif" alt="GIF review quán nướng Hàn"><span class="cap"><span class="mono">FOOD REVIEW</span>Quán nướng Hàn GU:EM<br><span class="v">5.7K VIEW</span></span></a>
+          <a class="tile" href="https://www.tiktok.com/@chillwu43/video/7643677293537152263" target="_blank" rel="noopener"><img loading="lazy" src="g_chmatcha.gif" alt="GIF vlog matcha"><span class="cap"><span class="mono">VLOG CÀ PHÊ</span>Đi uống matcha<br><span class="v">2.4K VIEW</span></span></a>
+        </div>
+      </article>
+
+      <p class="views-note mono" style="margin-top:40px">Chỉ hiển thị video từ 1K view trở lên (riêng Delight hiển thị toàn bộ video đã edit). Số view và follower lấy từ trang TikTok, Facebook công khai ngày 07/11/2026; số follower tại thời điểm quản lý và lượt xem fanpage Kenhbit lấy từ báo cáo cá nhân.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="end" id="contact">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">FINAL CUT</span><span class="mono">00:00:00:00 → EXPORT</span></div>
+      <h2>Cùng dựng<br>video <em>tiếp theo?</em></h2>
+      <div class="contact">
+        <div class="cbox"><span class="mono">EMAIL</span><div class="val" id="v-mail">uyenp422@gmail.com</div><button class="copy" type="button" data-copy="v-mail">Sao chép</button></div>
+        <div class="cbox"><span class="mono">ĐIỆN THOẠI / ZALO</span><div class="val" id="v-phone">0935 038 684</div><button class="copy" type="button" data-copy="v-phone">Sao chép</button></div>
+        <div class="cbox"><span class="mono">KHU VỰC</span><div class="val">Đà Nẵng</div><span class="chip">NHẬN VIỆC REMOTE</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><div class="wrap mono"><span>© 2026 PHẠM PHƯƠNG UYÊN</span><span>SOCIAL MEDIA &amp; VIDEO EDITOR</span></div></footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var el=document.getElementById(b.dataset.copy), txt=el.textContent.trim(), old=b.textContent;
+    function done(){b.textContent='Đã sao chép';setTimeout(function(){b.textContent=old},1600)}
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Đã chọn, bấm Ctrl+C';setTimeout(function(){b.textContent=old},2200)}
+    try{navigator.clipboard.writeText(txt).then(done,sel)}catch(e){sel()}
+  });
+});
+// Play videos only while on screen, to save bandwidth.
+var vids=document.querySelectorAll('video');
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting&&!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){})}else{v.pause()}})},{rootMargin:'120px'});
+  vids.forEach(function(v){if(reduce){v.removeAttribute('autoplay');v.pause()}io.observe(v)});
+}
+</script>
+
+</body>
+</html>
